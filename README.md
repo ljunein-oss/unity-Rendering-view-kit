@@ -24,13 +24,13 @@
 Package Manager ▸ `+` ▸ Add package from git URL：
 
 ```
-https://github.com/ljunein-oss/unity-ue-render-kit.git
+https://github.com/ljunein-oss/unity-Rendering-view-kit.git
 ```
 
 要固定版本就带上 tag：
 
 ```
-https://github.com/ljunein-oss/unity-ue-render-kit.git#v1.0.0
+https://github.com/ljunein-oss/unity-Rendering-view-kit.git#v1.0.0
 ```
 
 也可以直接把文件夹拷进工程的 `Packages` 目录。

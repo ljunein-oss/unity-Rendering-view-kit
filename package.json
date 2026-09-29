@@ -21,9 +21,9 @@
     "url": "https://github.com/ljunein-oss"
   },
   "license": "MIT",
-  "documentationUrl": "https://github.com/ljunein-oss/unity-ue-render-kit#readme",
-  "changelogUrl": "https://github.com/ljunein-oss/unity-ue-render-kit/blob/main/CHANGELOG.md",
-  "licensesUrl": "https://github.com/ljunein-oss/unity-ue-render-kit/blob/main/LICENSE.md",
+  "documentationUrl": "https://github.com/ljunein-oss/unity-Rendering-view-kit#readme",
+  "changelogUrl": "https://github.com/ljunein-oss/unity-Rendering-view-kit/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/ljunein-oss/unity-Rendering-view-kit/blob/main/LICENSE.md",
   "category": "Editor",
   "dependencies": {},
   "samples": []

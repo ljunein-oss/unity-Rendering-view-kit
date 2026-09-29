@@ -18,13 +18,13 @@ Tools ▸ Render Kit ▸ 后处理调参 (Post FX Tuner)
 Package Manager ▸ `+` ▸ Add package from git URL:
 
 ```
-https://github.com/ljunein-oss/unity-ue-render-kit.git
+https://github.com/ljunein-oss/unity-Rendering-view-kit.git
 ```
 
 Pin a version with a tag:
 
 ```
-https://github.com/ljunein-oss/unity-ue-render-kit.git#v1.0.0
+https://github.com/ljunein-oss/unity-Rendering-view-kit.git#v1.0.0
 ```
 
 Or just copy the folder into your project's `Packages` directory.
