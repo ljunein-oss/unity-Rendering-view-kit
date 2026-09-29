@@ -12,6 +12,8 @@
 工具 ▸ Render Kit ▸ 光照体检与一键设置 (Lighting Doctor)
 工具 ▸ Render Kit ▸ 后处理调参 (Post FX Tuner)
 ```
+<img width="455" height="306" alt="Find_big" src="https://github.com/user-attachments/assets/2d391d37-9eb9-47e0-8fa2-7530d81637a7" />
+其实还有一个原因就是这边的要求面积很大，但是只有1660跌丝袜所以有了这个可以一边调光一边优化烘焙的工具
 
 ## 安装
 
