@@ -31,3 +31,7 @@ desktop.ini
 
 # 本工具运行时产生的备份目录（不要提交）
 RenderKitBackup/
+
+# Visual Studio 缓存
+.vs/
+*.csproj.user
