@@ -1,5 +1,9 @@
 # Render Kit — Unity 光照体检 + 后处理调参
 
+[![Unity](https://img.shields.io/badge/Unity-2021.3%2B-black?logo=unity)](https://unity.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
+[![URP](https://img.shields.io/badge/URP-10%2B-blue)](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest)
+
 两个**编辑器工具**，专门解决一个很常见的美术问题：**场景"亮暗不分明"、画面发灰发平**。
 
 不是靠拉 `Contrast` 滑块硬凑，而是先把**光照结构**做对（环境光 / 主光 / 光照探针 / 烘焙预算），
@@ -52,13 +56,13 @@
 Package Manager ▸ `+` ▸ **Add package from git URL**：
 
 ```
-https://github.com/<你的用户名>/<仓库名>.git
+https://github.com/ljunein-oss/unity-ue-render-kit.git
 ```
 
 或在 `Packages/manifest.json` 里加：
 
 ```json
-"com.rtools.renderkit": "https://github.com/<你的用户名>/<仓库名>.git"
+"com.rtools.renderkit": "https://github.com/ljunein-oss/unity-ue-render-kit.git"
 ```
 
 ### 方式 B：手动
