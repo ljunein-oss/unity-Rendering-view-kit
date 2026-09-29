@@ -198,19 +198,30 @@ public class RKLightingDoctorWindow : EditorWindow
             EditorGUILayout.HelpBox("显存 ≤4GB：Progressive GPU 烘焙器很容易装不下而退回 CPU（慢 10~50 倍）。" +
                                     "建议分辨率用 1、图集上限 512，并且烘焙时关掉 Game 视图预览。", MessageType.Info);
 
-        DrawAmbient();
-        DrawSun();
-        DrawProbes();
-        DrawGi();
+        // 播放模式下 Unity 不允许标记场景为脏（会抛 InvalidOperationException），
+        // 而且这里改的本来就是场景/光照设置，退出 Play 之后也会被丢掉，所以直接锁住。
+        bool playing = EditorApplication.isPlayingOrWillChangePlaymode;
+        if (playing)
+            EditorGUILayout.HelpBox("正在播放模式（或正在切换）。这个窗口改的是场景和光照设置，先在 Unity 里退出 Play 再点按钮。" +
+                                    "（播放中点击会被忽略，不会再抛异常。）", MessageType.Warning);
 
-        EditorGUILayout.Space(8);
-        using (new EditorGUILayout.HorizontalScope())
+        using (new EditorGUI.DisabledScope(playing))
         {
-            var old = GUI.backgroundColor;
-            GUI.backgroundColor = new Color(1f, 0.85f, 0.6f);
-            if (GUILayout.Button("↩ 还原光照设置（按记录还原）", GUILayout.Height(30))) RestoreAll();
-            GUI.backgroundColor = old;
+            DrawAmbient();
+            DrawSun();
+            DrawProbes();
+            DrawGi();
+
+            EditorGUILayout.Space(8);
+            using (new EditorGUILayout.HorizontalScope())
+            {
+                var old = GUI.backgroundColor;
+                GUI.backgroundColor = new Color(1f, 0.85f, 0.6f);
+                if (GUILayout.Button("↩ 还原光照设置（按记录还原）", GUILayout.Height(30))) RestoreAll();
+                GUI.backgroundColor = old;
+            }
         }
+
         if (!string.IsNullOrEmpty(_status))
             EditorGUILayout.HelpBox(_status, MessageType.Info);
 
@@ -721,6 +732,8 @@ public class RKLightingDoctorWindow : EditorWindow
 
     static void MarkSceneDirty()
     {
+        // 播放模式下 MarkSceneDirty 会抛 InvalidOperationException，这里直接跳过。
+        if (EditorApplication.isPlayingOrWillChangePlaymode) return;
         EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
         SceneView.RepaintAll();
     }

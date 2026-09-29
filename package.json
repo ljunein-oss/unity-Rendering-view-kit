@@ -2,7 +2,7 @@
   "name": "com.rtools.renderkit",
   "version": "1.0.0",
   "displayName": "Render Kit — 光照体检 + 后处理调参",
-  "description": "两个 Unity 编辑器工具：① Lighting Doctor 光照体检与一键设置（环境光/主光/光照探针/烘焙预算诊断/一键瘦身，全渲染管线通用）② Post FX Tuner 后处理调参（亮暗对比预设，带一键回退，需要 URP/HDRP 的 Volume 框架）。两个工具的所有修改都支持 Undo 与文件级回退。",
+  "description": "两个 Unity 编辑器工具：① Lighting Doctor 光照体检与一键设置（环境光/主光/光照探针/烘焙预算诊断/一键瘦身，全渲染管线通用）② Post FX Tuner 后处理调参（亮暗对比预设，带一键回退，需要 URP）。两个工具的所有修改都支持 Undo 与文件级回退。",
   "unity": "2021.3",
   "unityRelease": "0f1",
   "keywords": [
